@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>WebRTC capture video and audio</title>
+    <style>
+        .none{
+            -webkit-filter:none;
+        }
+
+        .blur{
+            -webkit-filter:blur(3px);
+        }
+        .grayscale{
+            -webkit-filter:grayscale(1);
+        }
+        .invert{
+            -webkit-filter:invert(1);
+        }
+        .sepia {
+            -webkit-filter:sepia(1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- 用于显示和选择设备-->
+<!--==============   Used to display and select devices   ==================-->
+<!--<div>-->
+    <!--<label>audio input device:</label>-->
+    <!--<select id = "audioSource"></select>-->
+<!--</div>-->
+
+<!--<div>-->
+    <!--<label>audio output device:</label>-->
+    <!--<select id = "audioOutput"></select>-->
+<!--</div>-->
+
+<!--<div>-->
+    <!--<label>video input device:</label>-->
+    <!--<select id = "videoSource"></select>-->
+<!--</div>-->
+
+<!--分辨率选择器-->
+======================Resolution selection===================
+
+<div>
+    <label>Resolution:</label>
+    <select id = "resolution">
+        <!--<option value = "video/webm;codecs=h264 opus">video/webm;codecs=h264,opus</option>-->
+        <option value = "video/webm;codecs=vp9,opus">video/webm;codecs=vp9,opus</option>
+        <option value = "video/x-matroska;codecs=avc1">video/x-matroska;codecs=avc1</option>
+        <option value = "video/webm;codecs=vp8,opus">video/webm;codecs=vp8,opus</option>
+        <option value = "video/webm;codecs=h264">video/webm;codecs=h264</option>
+    </select>
+</div>
+
+======================Audio Source selection===========================
+<div>
+    <label>AudioSource:</label>
+    <select id = "audioSource">
+        <option value = "both">System Audio and MicPhone Audio</option>
+        <option value = "micphoneaudio">MicPhone Audio</option>
+        <option value = "systemaudio">System Audio</option>
+        <option value = "noaudio">No Audio</option>
+    </select>
+</div>
+
+<!--音频输入选择-->
+
+<!--视频效果选择-->
+<!--============== Video effect selection ==================-->
+<!--<div>-->
+    <!--<label>Filter:</label>-->
+    <!--<select id = "filter">-->
+        <!--<option value = "none">None</option>-->
+        <!--<option value = "blur">模糊</option>-->
+        <!--<option value = "grayscale">灰度</option>-->
+        <!--<option value = "invert">反色</option>-->
+        <!--<option value = "sepia">褐色</option>-->
+    <!--</select>-->
+<!--</div>-->
+
+<!--显示视频图像-->
+==============show video ==================
+<selection>
+    <!--autoplay 表示一进来就播放 controls表示显示播放的按钮-->
+    <!--<audio autoplay controls id = 'audioplayer'></audio>-->
+    <table>
+        <tr>
+            <td><video autoplay playsinline id = "player" width="1270" height="500"></video></td>
+            <!--<td><video playsinline id = "recplayer"></video></td>-->
+            <!--<td> <div id = 'constraints' class = 'output'></div></td>-->
+        </tr>
+        <tr>
+            <td> <button id = "record">Start Record</button></td>
+            <td> <button id = "stop" disabled>Stop Record</button></td>
+            <td> <button id = "recplay" disabled>Play</button></td>
+            <td> <button id = "download" disabled>Download</button></td>
+        </tr>
+    </table>
+</selection>
+
+<!--<div>-->
+    <!--<button id = "snapshort">screenshot</button>-->
+<!--</div>-->
+<!--<div>-->
+    <!--<canvas id = "picture">screenshot</canvas>-->
+<!--</div>-->
+<!--==============   js   ==================-->
+<script src = "./screenshot.js"></script>
+<script src = "./webrtc.js"></script>
+</body>
+</html>
