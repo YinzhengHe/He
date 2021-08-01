@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note Taking</title>
+    <link rel="stylesheet" href="./NoteStyle.css">
+</head>
+
+<body>
+
+<div class="main-content">
+    <!--text editor-->
+    <div class="text-editor-header">
+
+        <button type="button" class="btn" data-element="bold">
+            <i class="fa fa-bold"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="italic">
+            <i class="fa fa-italic"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="underline">
+            <i class="fa fa-underline"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="insertUnorderedList">
+            <i class="fa fa-list-ul"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="insertOrderedList">
+            <i class="fa fa-list-ol"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="jusitifyLeft">
+            <i class="fa fa-align-left"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="jusitifyCenter">
+            <i class="fa fa-align-center"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="jusitifyRight">
+            <i class="fa fa-align-right"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="jusitifyFull">
+            <i class="fa fa-align-justify"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="creatLink">
+            <i class="fa fa-link"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="insertImage">
+            <i class="fa fa-image"></i>
+        </button>
+
+        <input type="file" id="uploadImage" style="display: none">
+
+        <button type="button" class="btn" data-element="download">
+            <i class="fas fa-file-download"></i>
+        </button>
+
+        <!--content-->
+        <div class="content" contenteditable="true" id="content">
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="jquery-2.2.3.min.js"></script>
+<script src="FileSaver.js"></script>
+<script src="jquery.wordexport.js"></script>
+<script src="Note.js"></script>
+<script src="https://kit.fontawesome.com/234e0b2b3d.js" crossorigin="anonymous"></script>
+</body>
+</html>
